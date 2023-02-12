@@ -1,0 +1,32 @@
+{
+  "reviews": [
+    {
+      "id": "0",
+      "name": "Ángel Padilla",
+      "description": "Llevo unos meses apuntado en este gimnasio y estoy muy contento con las instalaciones. Hay buen ambiente y el dueño (monitor) es muy amable, así como un gran profesional que no dudará en aconsejarte acerca de los entrenamientos que mejor se adaptan a tus necesidades. Lo recomiendo porque, además, pone a disposición del usuario un amplio horario que se adapta a las circunstancias personales de cada uno.",
+      "start": 5,
+      "link": "https://g.co/kgs/EECdHd"
+    },
+    {
+      "id": "1",
+      "name": "Mario Calero",
+      "description": "Es un beun sitio ubicado serca del centro del pueblo ,con ambiente agradable muy bien acondicionado con requiero a máquinas y utiles de gimnasio",
+      "start": 5,
+      "link": "https://g.co/kgs/Cc1teH"
+    },
+    {
+      "id": "2",
+      "name": "Alex Jimenez",
+      "description": "Hay gimnasios por todas partes, y todos ofrecen, en su esencia, lo mismo: un lugar para ponerse en forma. Sin embargo, World Fitness Club va mucho más allá, busca alejarse de los estereotipos que están encasillando en los últimos años a estos establecimientos deportivos. Es un club deportivo que intenta recuperar la esencia de los gimnasios tradicionales, incorporando la última tecnología y novedad del sector. Agradezco la profesionalidad adaptada a cada cliente día tras día y sobre todo el respeto y admiración por la divulgación del Fitness natural que se respira en este club!! Gracias!",
+      "start": 5,
+      "link": "https://g.co/kgs/9ny9Fe"
+    },
+    {
+      "id": "3",
+      "name": "Leo Apps 87",
+      "description": "He de decir que world fitness club es un lugar cómodo acogedor...y perfecto.. para desahogarse y quitarse las ganas de entrenar en unas cortas vacaciones a puente Genil... Que es donde entreno para quitarme el mono y la necesidad de continuar con mi progreso físico...cuando voy a visitar a mis abuelos...he de decir que el dueño (Miguel ) te facilita todo el material necesario para que tú puedas entrar en la hora que quieras y desees realizar tus rutinas y entrenamientos siempre que hagas, y le des un uso respetuoso a las instalaciones....espero q el sistema siempre siga igual ...es un lugar acogedor y las facilidades q da Miguel lo hacen más completo aún saludos",
+      "start": 5,
+      "link": "https://g.co/kgs/NXjRFs"
+    }
+  ]
+}
