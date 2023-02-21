@@ -1,130 +1,90 @@
 @import '../../styles/colors.scss';
 
-.navMobile,
 .nav {
+  display: flex;
+  gap: 1rem;
+
   ul {
     position: fixed;
+    top: 15vh;
+    left: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    top: 10vh;
-    left: 0;
+    justify-content: center;
+    gap: 5rem;
+    transform: translateY(100%);
     width: 100vw;
-    height: 90vh;
-    background: linear-gradient(70deg, $white, $red);
-    transition: transform .5s linear;
+    background-color: $red;
+    transition: transform 1s, z-index 3s;
+    height: 85vh;
+
+    &[data-isOpen=true] {
+      transform: translateY(0);
+    }
 
     @media screen and (min-width: 768px) {
-      color: $red;
       position: static;
       flex-direction: row;
-      gap: 1rem;
-      background: transparent;
-      height: auto;
+      transform: translateX(0);
       width: auto;
+      height: auto;
+      background-color: transparent;
+      gap: 1rem;
     }
 
     li {
-      font-size: 1.5em;
-      padding: 1.5rem;
-      font-weight: bold;
+      font-size: 3rem;
+      padding: .5rem;
+
+      &[data-active=true] {
+        color: $black;
+        font-weight: bold;
+
+        @media screen and (min-width: 768px) {
+          color: $red;
+        }
+      }
 
       @media screen and (min-width: 768px) {
-        padding: 1rem;
-        font-size: 1.1em;
+        font-size: 1rem;
       }
     }
   }
 
-  .contact {
+  .menuActivador {
     display: flex;
-    gap: 1em;
-
-    span {
-      font-size: .8em;
-    }
-
-    svg {
-      margin-top: 6rem;
-      width: 2rem;
-      height: 2rem;
-    }
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 40px;
+    height: 40px;
 
     @media screen and (min-width: 768px) {
       display: none;
     }
-  }
-}
 
-.nav {
-  ul {
-    transform: translateX(100%);
-
-    @media screen and (min-width: 768px) {
-      transform: translateX(0);
-    }
-  }
-}
-
-.button,
-.buttonClose {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 10vh;
-  padding: .2rem;
-  background-color: $red;
-  border-bottom: 3px solid $red;
-  overflow: hidden;
-
-  @media screen and (min-width:768px) {
-    display: none;
-  }
-
-  div {
-    position: relative;
-    width: 100%;
-    height: 4px;
-    background-color: $white;
-    border-radius: 2px;
-    transition: transform 1s ease-out;
-
-    &::after,
-    &::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      width: 100%;
+    .menuActivadorLinea1,
+    .menuActivadorLinea2,
+    .menuActivadorLinea3 {
       height: 4px;
-      background-color: $white;
-      border-radius: 2px;
-      transition: transform 1s ease-out;
+      background-color: $grey;
+      opacity: 1;
+      transform: translateY(0) rotate(0);
+      transition: transform 0.3s;
     }
 
-    &::before {
-      top: -10px;
-    }
+    &[data-isOpen=true] {
+      .menuActivadorLinea1 {
+        transform: translateY(10px) rotate(45deg);
+      }
 
-    &::after {
-      top: 10px;
-    }
-  }
-}
+      .menuActivadorLinea2 {
+        opacity: 0;
+      }
 
-.buttonClose {
-  div {
-    transform: rotate(45deg);
-    top: 0;
-
-    &::before {
-      transform: rotate(90deg);
-      top: 0;
-    }
-
-    &::after {
-      display: none;
+      .menuActivadorLinea3 {
+        transform: translateY(-10px) rotate(-45deg);
+      }
     }
   }
 }

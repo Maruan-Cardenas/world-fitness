@@ -1,51 +1,23 @@
-import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { useState } from 'react'
-
 import styles from './Nav.module.scss'
 
-import { Email, Phone, WhatsApp } from '../Icons'
-
-const links = [{
-  label: 'Inicio',
-  link: '#inicio'
-},
-{
-  label: 'Productos Fitness',
-  link: 'productos'
-},
-{
-  label: 'Opiniones',
-  link: '#opiniones'
-},
-{
-  label: 'Contacto',
-  link: '#contacto'
-}]
-
 const Nav = () => {
-  const [nav, setNav] = useState(false)
+  const router = useRouter()
+  const [isOpen, setIsOpen] = useState(false)
   return (
-    <>
-      <nav className={nav ? styles.navMobile : styles.nav}>
-        <ul>
-          {
-          links.map(({ label, link }) => (
-            <li key={link} onClick={() => setNav(false)}>
-              <Link href={`/${link}`}>
-                {label}
-              </Link>
-            </li>
-          ))
-        }
-          <li className={styles.contact}>
-            <Email />
-            <Phone />
-            <WhatsApp />
-          </li>
-        </ul>
-        <span className={nav ? styles.buttonClose : styles.button} onClick={() => setNav(!nav)}><div /></span>
-      </nav>
-    </>
+    <nav className={styles.nav}>
+      <ul data-isOpen={isOpen}>
+        <li data-active={router.asPath === '/'}>Inicio</li>
+        <li>Productos</li>
+        <li>Contacto</li>
+      </ul>
+      <div data-isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} className={styles.menuActivador}>
+        <span className={styles.menuActivadorLinea1} />
+        <span className={styles.menuActivadorLinea2} />
+        <span className={styles.menuActivadorLinea3} />
+      </div>
+    </nav>
   )
 }
 

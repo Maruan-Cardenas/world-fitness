@@ -1,29 +1,38 @@
-// Styles
 import styles from './Header.module.scss'
-
-// Next Components
-import Link from 'next/link'
-import Image from 'next/image'
-
-// Images
-import logo from '../../public/images/logo.png'
 import Nav from '../Nav'
+import { Email, Maps, Phone, WhatsApp } from '../Icons'
+import Image from 'next/image'
+import logo from '../../public/images/logo.png'
+import Contact from '../Contact'
 
 const Header = () => {
   return (
-    <>
-      <header className={styles.header}>
-        <div className={styles.logo}>
-          <Link href='/'>
-            <Image src={logo} alt='Logo' />
-          </Link>
-        </div>
-        <div className={styles.nav}>
-          <Nav />
-        </div>
-      </header>
-      <div id='inicio' className={styles.box} />
-    </>
+    <header className={styles.header}>
+      <span className={styles.logo}>
+        <Image src={logo} alt='Toldos Malaka' />
+      </span>
+      <Contact
+        icon={<WhatsApp />}
+        title='WhatsApp'
+        subTitle='618 050 806'
+      />
+      <Contact
+        icon={<Phone />}
+        title='Llámanos'
+        subTitle='618 050 806'
+      />
+      <Contact
+        icon={<Email />}
+        title='Email'
+        subTitle='worldfitnes@gmail.com'
+      />
+      <Contact
+        icon={<Maps />}
+        title='Localízanos'
+        subTitle='C/ Maestro Francisco Vila, Nº33'
+      />
+      <Nav />
+    </header>
   )
 }
 

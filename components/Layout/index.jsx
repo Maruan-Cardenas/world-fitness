@@ -1,24 +1,20 @@
-// Styles
 import styles from './Layout.module.scss'
-// Next Components
 import Head from 'next/head'
 import Header from '../Header'
-import Footer from '../Footer'
 
-const Layout = ({ children, title, keywords, description }) => {
+const Layout = ({ children, title, description }) => {
   return (
     <>
       <Head>
         <title>{title}</title>
         <meta name='description' content={description} />
-        <meta name='keywords' content={keywords} />
-        <meta name='author' content='Maruan Vicente Cardenas El Hachmaoui' />
-        <meta name='copyright' content='World Fitness' />
-        <meta name='google-site-verification' content='GOJ16utzr-GVMZMRIuMX6oPfj1wl97_v6YIe73eYdZQ' />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
       <Header />
-      <main className={styles.main}>{children}</main>
-      <Footer />
+      <main className={styles.layout}>
+        {children}
+      </main>
     </>
   )
 }

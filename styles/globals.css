@@ -88,7 +88,6 @@ button {
 /* Configuramos anclas suaves */
 html {
   scroll-behavior: smooth;
-  user-select: none;
 }
 
 /* Desactivamos estilos por defecto de las principales etiquetas de texto */
@@ -146,13 +145,8 @@ label {
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
-  background-color: transparent;
   color: inherit;
   display: block;
-  /* opcional */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
 }
 
 /* Reseteamos las tablas */
@@ -181,4 +175,16 @@ body {
   font-size: 100%;
   font-family: var(--tipo-principal);
   color: var(--negro);
+  /* opcional */
+  line-height: 1.4em;
+  /* opcional */
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  /* opcional */
+  font-smooth: always;
+  /* opcional */
+  -webkit-font-smoothing: antialiased;
+  /* opcional */
+  -moz-osx-font-smoothing: grayscale;
 }
